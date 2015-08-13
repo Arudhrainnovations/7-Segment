@@ -1,0 +1,44 @@
+#include<reg51.h>
+sfr seg=0xA0;
+sfr segment=0xB0;
+void delay();
+
+void main()
+{
+	unsigned int i;
+	while(1)	
+	{
+		for(i=0;i<11;i++)
+		{
+		seg=segment=0x3F;
+		delay();
+		seg=segment=0x06;
+		delay();
+		seg=segment=0x5B;
+		delay();
+		seg=segment=0x4F;
+		delay();
+		seg=segment=0x66;
+		delay();
+		seg=segment=0x6D;
+		delay();
+		seg=segment=0x7D;
+		delay();
+		seg=segment=0x07;
+		delay();
+		seg=segment=0xFF;
+		delay();
+		seg=segment=0x67;
+		delay();
+		}
+	}
+}
+
+void delay()
+{
+	unsigned int j;
+	unsigned int r;
+	for(j=0;j<250;j++){
+	for(r=0;r<250;r++){;}
+	}	
+}
